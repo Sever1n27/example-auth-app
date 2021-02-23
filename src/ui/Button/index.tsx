@@ -13,7 +13,8 @@ const StyledButton = styled.button<ButtonProps>`
     props.variant === "secondary"
       ? props.theme.background
       : props.theme.colors.neutral};
-  color: ${(props) => props.theme.colors.main};
+  color: ${(props) =>
+    props.variant === "secondary" ? props.theme.colors.main : "white"};
   border-radius: ${(props) => props.theme.borderRadius};
   border: ${(props) => props.theme.border};
   transition: ${(props) => props.theme.transition};
@@ -25,6 +26,16 @@ const StyledButton = styled.button<ButtonProps>`
       props.variant === "secondary"
         ? props.theme.colors.error
         : props.theme.colors.success};
+    color: white;
+  }
+  &:focus {
+    background-color: ${(props) =>
+      props.variant === "secondary"
+        ? props.theme.colors.error
+        : props.theme.colors.success};
+    color: white;
+    outline: none;
+    border-color: ${(props) => props.theme.colors.neutral};
   }
 `;
 

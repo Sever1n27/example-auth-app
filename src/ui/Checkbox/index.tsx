@@ -37,6 +37,9 @@ const StyledInput = styled.input`
       display: block;
     }
   }
+  &:focus ~ ${Checkmark} {
+    border-color: ${(props) => props.theme.colors.neutral};
+  }
 `;
 
 const Label = styled.label`

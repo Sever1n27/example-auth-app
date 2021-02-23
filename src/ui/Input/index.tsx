@@ -14,6 +14,10 @@ const StyledInput = styled.input<InputProps>`
   display: block;
   border-color: ${(props) =>
     props.error ? props.theme.colors.error : props.theme.colors.secondary};
+  &:focus {
+    border-color: ${(props) => props.theme.colors.neutral};
+    outline: none;
+  }
 `;
 
 const Label = styled.label`
@@ -23,7 +27,7 @@ const Label = styled.label`
 `;
 
 type Props = {
-  type?: "text" | "number" | "password";
+  type?: "text" | "number" | "password" | "email";
   required?: boolean;
   onChange?: (value: any) => void;
   error?: boolean;

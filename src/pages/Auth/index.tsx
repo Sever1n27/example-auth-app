@@ -146,7 +146,7 @@ export function Auth() {
                 placeholder="Type your email"
                 value={data.email}
                 required={true}
-                type="text"
+                type="email"
                 onChange={handleChange}
                 error={!!error}
               />
