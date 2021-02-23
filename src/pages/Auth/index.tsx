@@ -59,6 +59,16 @@ const SuccessContainer = styled.div`
   flex-grow: 1;
 `;
 
+const HelpContainer = styled.div`
+  position: fixed;
+  left: 1rem;
+  top: 1rem;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8rem;
+`;
+
 const SuccessMessage = styled.span`
   margin-bottom: 1rem;
 `;
@@ -181,6 +191,10 @@ export function Auth() {
           </>
         )}
       </Card>
+      <HelpContainer>
+        <span>valid login: test@gmail.com</span>
+        <span>valid password: test</span>
+      </HelpContainer>
     </Container>
   );
 }
